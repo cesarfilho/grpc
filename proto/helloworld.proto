@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package helloworld;
+
+// O serviço Hello define uma chamada de RPC chamada SayHello
+service HelloService {
+  rpc SayHello (HelloRequest) returns (HelloReply);
+}
+
+// Mensagem de requisição
+message HelloRequest {
+  string name = 1;
+}
+
+// Mensagem de resposta
+message HelloReply {
+  string message = 1;
+}
